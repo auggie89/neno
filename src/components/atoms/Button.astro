@@ -1,0 +1,25 @@
+---
+import RightArrow from "../Icons/RightArrow.astro";
+const {class:className, type, href} = Astro.props;
+const Element = href ? "a" : "button"
+---
+
+<Element class:list={[className]} type={type} href={href}>
+  <div className="">
+    <RightArrow width={20} height{20} />
+  </div>
+</Element>
+
+<style>
+  .btn {
+    color:#fff;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.25rem;
+    
+  }
+  
+  .btn-primary {
+    background-color: #D51E2D;
+  }
+</style>
