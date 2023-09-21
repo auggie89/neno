@@ -4,17 +4,18 @@ const {class:className, type, href,} = Astro.props;
 const Element = href ? "a" : "button"
 ---
 
-<Element class:list={[className]} type={type} href={href}>
-  <div class="gu-btn-container">
+<Element class:list={[className,"ga-btn"]} type={type} href={href}>
     <slot /> 
-    <div class="gu-icon-container">
-      <RightArrow width="15" height="15" />
+    <div class="ga-btn__icon">
+      <RightArrow width="15" height="15"/>
     </div>
-  </div>
 </Element>
 
 <style>
   .ga-btn {
+    display: flex;
+    align-items: center;
+    gap: 6.25rem;
     color:#fff;
     border-radius: 50px;
     border: none;
@@ -30,12 +31,7 @@ const Element = href ? "a" : "button"
     background-color: #20262E;
   }
 
-  .gu-btn-container {
-    display: flex;
-    align-items: center;
-    gap: 6.25rem;
-  }
-  .gu-icon-container {
+  .ga-btn__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +39,7 @@ const Element = href ? "a" : "button"
     border-radius: 50%;
     border: solid white 2px;
   }
-  .gu-icon-container:hover {
+  .ga-btn__icon:hover {
     background-color: #2DA0AB;
   }
 </style>
