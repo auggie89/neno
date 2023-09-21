@@ -1,25 +1,49 @@
 ---
 import RightArrow from "../Icons/RightArrow.astro";
-const {class:className, type, href} = Astro.props;
+const {class:className, type, href,} = Astro.props;
 const Element = href ? "a" : "button"
 ---
 
 <Element class:list={[className]} type={type} href={href}>
-  <div className="">
-    <RightArrow width={20} height{20} />
+  <div class="gu-btn-container">
+    <slot /> 
+    <div class="gu-icon-container">
+      <RightArrow width="15" height="15" />
+    </div>
   </div>
 </Element>
 
 <style>
-  .btn {
+  .ga-btn {
     color:#fff;
     border-radius: 50px;
     border: none;
     font-size: 1.25rem;
-    
+    padding: 0.625rem;
+    padding-left: 1.275rem;
   }
   
-  .btn-primary {
+  .ga-btn-primary {
     background-color: #D51E2D;
+  }
+  .ga-btn-secondary {
+    background-color: #20262E;
+  }
+
+  .gu-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 6.25rem;
+  }
+  .gu-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    border: solid white 2px;
+  }
+  .gu-icon-container:hover {
+    background-color: #2DA0AB;
   }
 </style>
