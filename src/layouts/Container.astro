@@ -1,0 +1,7 @@
+---
+const {class:className, as = "div"} = Astro.props
+const Element = as; 
+---
+<Element class:list={["container mx-auto", className]}>
+  <slot />
+</Element>

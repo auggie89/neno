@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import Container from '../../layouts/Container.astro';
+import Logo from '../../images/logo.svg';
+const links = [
+  {
+    label: "About Us",
+    href: "/about-us"
+  },
+  {
+    label: "Selected Work",
+    href: "/selected-work"
+  },
+  {
+    label: "Our Expertise",
+    href: "/our-expertise"
+  },
+  {
+    label: "Our Workflow",
+    href: "/our-workflow"
+  },
+  {
+    label: "Contact",
+    href: "/contact"
+  }
+]
+---
+<nav class="gm-main-nav">
+  <h2 class="sr-only">Main Navigation</h2>
+  <Container class="display-3xl">
+    <Image src={Logo} alt="logo"/>
+  </Container>
+
+</nav>
+
+<style>
+  .gm-main-nav {
+    background-color: #F5F4F4;
+  }
+</style>
