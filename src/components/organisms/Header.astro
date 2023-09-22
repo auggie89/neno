@@ -1,6 +1,26 @@
 ---
+import { Image } from 'astro:assets';
+import Container from "../../layouts/Container.astro";
+import Logo from "../../images/logo.svg"
+import Hamburger from '../Icons/Hamburger.astro';
+import GlobalStyles from '../GlobalStyles.astro';
 
 ---
 <header>
-logo + hamburger
+  <GlobalStyles />
+  <Container class="display-3xl">
+    <Image src={Logo} alt='logo' />
+    <Hamburger width="10" height="10"/>
+  </Container>
 </header>
+
+<style>
+  header {
+    background-color: #F8F8F8;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+  }
+</style>
