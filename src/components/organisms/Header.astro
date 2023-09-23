@@ -3,14 +3,14 @@ import { Image } from 'astro:assets';
 import Container from "../../layouts/Container.astro";
 import Logo from "../../images/logo.svg"
 import Hamburger from '../Icons/Hamburger.astro';
-import GlobalStyles from '../GlobalStyles.astro';
+
 
 ---
 <header>
-  <GlobalStyles />
-  <Container class="display-3xl">
+
+  <Container class="data">
     <Image src={Logo} alt='logo' />
-    <Hamburger width="10" height="10"/>
+    <Hamburger width="20" height="20"/>
   </Container>
 </header>
 
@@ -18,9 +18,8 @@ import GlobalStyles from '../GlobalStyles.astro';
   header {
     background-color: #F8F8F8;
   }
-  .container {
+  .data {
     display: flex;
     justify-content: space-between;
-    background-color: blueviolet;
   }
 </style>
