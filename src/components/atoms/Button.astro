@@ -5,22 +5,23 @@ const Element = href ? "a" : "button"
 ---
 
 <Element class:list={[className,"ga-btn"]} type={type} href={href}>
-    <slot /> 
-    <div class="ga-btn__icon">
-      <RightArrow width="15" height="15"/>
-    </div>
+  <slot /> 
+  <div class="ga-btn__icon">
+    <RightArrow width="15" height="15"/>
+  </div>
 </Element>
 
 <style>
   .ga-btn {
     display: flex;
     align-items: center;
-    gap: 6.25rem;
+    gap: 3rem;
     color:#fff;
+    font-weight: 700;
     border-radius: 50px;
     border: none;
     font-size: 1.25rem;
-    padding: 0.625rem 0.625rem 0.625rem 1.9rem;
+    padding: 0.875rem 1rem 0.875rem 1.875rem;
   }
   
   .ga-btn-primary {
@@ -29,12 +30,12 @@ const Element = href ? "a" : "button"
   .ga-btn-secondary {
     background-color: #20262E;
   }
-
+  
   .ga-btn__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 50%;
     border: solid white 2px;
   }
