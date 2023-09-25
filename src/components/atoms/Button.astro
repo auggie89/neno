@@ -1,10 +1,17 @@
 ---
+interface Props {
+  type: "button" | "submit" | "reset"
+  href?: string
+  class?: string
+  color?: "primary"
+}
+
 import RightArrow from "../Icons/RightArrow.astro";
-const {class:className, type, href,} = Astro.props;
+const {class:className, type, href, color} = Astro.props;
 const Element = href ? "a" : "button"
 ---
 
-<Element class:list={[className,"ga-btn"]} type={type} href={href}>
+<Element class:list={[className,"ga-btn", color && `ga-btn-${color}`]} type={type} href={href}>
   <slot /> 
   <div class="ga-btn__icon">
     <RightArrow width="16" height="16"/>
