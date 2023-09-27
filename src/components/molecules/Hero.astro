@@ -4,9 +4,18 @@ import BackgroundImg from '../../images/hero-bg.jpg'
 import Container from '../layouts/Container.astro';
 import Button from '../atoms/Button.astro';
 ---
-<Image src={BackgroundImg} alt="background image" />
-<Container class="gm-hero__container">
-  <Button class="ga-btn-primary">
-    Find more about us
-  </Button>
-</Container>
+<section class="gm-hero">
+  <h2 class="sr-only">Our mission</h2>
+  <Image src={BackgroundImg} alt="background image" />
+  <Container class="gm-hero__container">
+    <Button class="ga-btn-primary">
+      Find more about us
+    </Button>
+  </Container>
+</section>
+
+<style>
+  .gm-hero {
+    min-height: 43.75rem;
+  }
+</style>
