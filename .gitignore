@@ -22,5 +22,5 @@ pnpm-debug.log*
 .vscode
 node_modules
 
-# IDE
+# IDE files
 .idea

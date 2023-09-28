@@ -1,18 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/atoms/Button.astro';
+import Hero from '../components/organisms/Hero.astro';
+import About from '../components/organisms/About.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<Button class="ga-btn ga-btn-primary">
-			Find more about us
-		</Button>
-	</main>
-
+<Layout title="Neno | Front-End Engineering & Web Development">
+  <Hero />
+  <About />
+	<Button color="primary">
+		Find more about us
+	</Button>
+	<Button>
+		Find more about us
+	</Button>
 </Layout>
-
-<style>
-
-	
-</style>

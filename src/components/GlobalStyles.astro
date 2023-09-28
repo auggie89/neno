@@ -1,18 +1,33 @@
 <style is:global>
-	ul {
-		list-style: none;
+	:root {
+		--color-white: #fff;
+		--color-primary: #D51E2D;
+		--color-gray: #33333;
+		--color-secondary: #20262e;
 	}
-	a {
-		text-decoration: none;
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 	}
-	button {
-		border:none
+
+	body {
+		font: 1.25rem/1.5 "Signika", Arial, sans-serif;
+		color: var(--color-gray);
 	}
-	.display-3xl {
-		max-width: 1400px;
-		margin: 0 auto;
+
+	ul { list-style: none; }
+	a { text-decoration: none; }
+
+	.gu-display-2xl {
+		font-size: 3.625rem;
+		font-weight: 700;
+		line-height: 1.25;
 	}
-	
+
+	.gu-display-xl { font-size: 2.625rem; }
+
 	.sr-only {
 		position: absolute;
 		width: 1px;

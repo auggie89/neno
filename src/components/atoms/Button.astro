@@ -1,44 +1,53 @@
 ---
+interface Props {
+  type: "button" | "submit" | "reset"
+  href?: string
+  class?: string
+  color?: "primary"
+}
+
 import RightArrow from "../Icons/RightArrow.astro";
-const {class:className, type, href,} = Astro.props;
+const {class:className, type, href, color} = Astro.props;
 const Element = href ? "a" : "button"
 ---
 
-<Element class:list={[className,"ga-btn"]} type={type} href={href}>
-    <slot /> 
-    <div class="ga-btn__icon">
-      <RightArrow width="15" height="15"/>
-    </div>
+<Element class:list={[className,"ga-btn", color && `ga-btn-${color}`]} type={type} href={href}>
+  <slot />
+  <div class="ga-btn__icon">
+    <RightArrow width="16" height="16"/>
+  </div>
 </Element>
 
 <style>
   .ga-btn {
     display: flex;
+    height: 3.625rem;
     align-items: center;
-    gap: 6.25rem;
-    color:#fff;
-    border-radius: 50px;
+    gap: 3rem;
+    color: #fff;
+    font: 700 1.25rem/1.5 "Signika", Arial, sans-serif;
+    border-radius: 3.125rem;
     border: none;
-    font-size: 1.25rem;
-    padding: 0.625rem 0.625rem 0.625rem 1.9rem;
+    padding: 0.6875rem 1.25rem 0.6875rem 1.875rem;
+    box-shadow: rgba(51,51,51,0.2) 0 0.25rem 0;
   }
   
   .ga-btn-primary {
-    background-color: #D51E2D;
+    background-color: var(--color-primary)
   }
   .ga-btn-secondary {
-    background-color: #20262E;
+    background-color: var(--color-secondary);
   }
 
   .ga-btn__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    border-radius: 50%;
-    border: solid white 2px;
+    padding: 0.5rem;
+    border-radius: 3.125rem;
+    border: solid white 0.125rem;
   }
-  .ga-btn__icon:hover {
+  .ga-btn-primary:hover .ga-btn__icon {
     background-color: #2DA0AB;
   }
 </style>
