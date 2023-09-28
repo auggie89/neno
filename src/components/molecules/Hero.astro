@@ -6,16 +6,41 @@ import Button from '../atoms/Button.astro';
 ---
 <section class="gm-hero">
   <h2 class="sr-only">Our mission</h2>
-  <Image src={BackgroundImg} alt="background image" />
+  <Image src={BackgroundImg} class="gm-hero__background" alt="background image" />
   <Container class="gm-hero__container">
-    <Button class="ga-btn-primary">
-      Find more about us
-    </Button>
+    <Container class="gm-hero__content">
+      <h1 class="text-xl">Front-end Engineering & Web Development</h1>
+      <p class="gm-hero__copy"> We bring your designs to life. We translate your visions into code. We provide great user experiences through top notch front-end solutions.</p>
+      <Button class="ga-btn-primary">
+        Find more about us
+      </Button>
+    </Container>
   </Container>
 </section>
 
 <style>
   .gm-hero {
     min-height: 43.75rem;
+  }
+
+  .gm-hero__background {
+    background-attachment: fixed;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .gm-hero__content {
+    max-width: 39.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: start;
+
+  }
+  .gm-hero__copy {
+    font-size: 1.25rem;
+		color: #fff;
   }
 </style>
