@@ -1,33 +1,32 @@
 <style is:global>
+	:root {
+		--color-white: #fff;
+		--color-primary: #D51E2D;
+		--color-gray: #33333;
+		--color-secondary: #20262e;
+	}
+
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 	}
-	ul {
-		list-style: none;
-	}
-	a {
-		text-decoration: none;
-	}
-	.display-3xl {
-		max-width: 1400px;
-		margin: 0 auto;
+
+	body {
+		font: 1.25rem/1.5 "Signika", Arial, sans-serif;
+		color: var(--color-gray);
 	}
 
-	.text-md {
-		font-size: 1.25rem;
-		color: #fff;
-	}
-	.text-xl {
+	ul { list-style: none; }
+	a { text-decoration: none; }
+
+	.gu-display-2xl {
 		font-size: 3.625rem;
-		line-height: 4.531rem;
-		color: #fff;
+		font-weight: 700;
+		line-height: 1.25;
 	}
 
-	.display-lg {
-		max-width: 42.5rem;
-	}
+	.gu-display-xl { font-size: 2.625rem; }
 	
 	.sr-only {
 		position: absolute;
@@ -40,4 +39,8 @@
 		white-space: nowrap;
 		border-width: 0;
 	}
-	</style>
+
+	.gu-bg-secondary {
+		background-color: var(--color-secondary);
+	}
+</style>

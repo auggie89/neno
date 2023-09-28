@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/signika": "^5.0.12",
     "astro": "^3.1.1"
   }
 }

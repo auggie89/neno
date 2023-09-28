@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import BackgroundImg from '../../images/hero-bg.jpg'
+import Container from '../layouts/Container.astro';
+import Button from '../atoms/Button.astro';
+---
+<section class="go-hero">
+  <h2 class="sr-only">Our mission</h2>
+  <Image src={BackgroundImg} class="go-hero__background" alt="" />
+  <Container class="go-hero__container">
+    <div class="go-hero__content">
+      <h1 class="gu-display-2xl go-hero__title">Front-end Engineering & Web Development</h1>
+      <p> We bring your designs to life. We translate your visions into code. We provide great user experiences through top notch front-end solutions.</p>
+      <Button class="ga-btn-primary">
+        Find more about us
+      </Button>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .go-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .go-hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .go-hero__container {
+    padding: 8.75rem 0 6.25rem;
+  }
+
+  .go-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.5rem;
+    color: var(--color-white);
+    max-width: 60ch;
+  }
+
+  .go-hero__title {
+    max-width: 20ch;
+  }
+
+  @media (min-width: 1050px) {
+    .go-hero {
+      padding-top: 2.5rem;
+      min-height: 43.75rem;
+    }
+  }
+</style>

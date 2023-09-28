@@ -1,6 +1,13 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
+  '@fontsource/signika':
+    specifier: ^5.0.12
+    version: 5.0.12
   astro:
     specifier: ^3.1.1
     version: 3.1.1
@@ -692,6 +699,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/signika@5.0.12:
+    resolution: {integrity: sha512-NuqdNEqN9Q22TgBmW+3slht81gYudU319E7biwpE8RFgcZ6A2ipQARTM3broKlpynybO6Il//5dvNDG593joNQ==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
