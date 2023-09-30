@@ -1,0 +1,61 @@
+---
+import Container from "../layouts/Container.astro";
+import { Image } from 'astro:assets';
+---
+
+
+<section class="go-work">
+  <h2 class="gu-display-2xl go-work__title">Selected Work</h2>
+  <Container class="go-work__container">
+    <h3 class="gu-display-lg go-work__project-title">Swiss.com</h3>
+    <p class="go-work__project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
+    <dl class="go-work__dl">
+     <dt class="go-work__list-title">Our responsibilities</dt>
+     <dd>
+      <ul class="go-work__list">
+        <li class="go-work__list-item">CSS</li>
+        <li class="go-work__list-item">Html</li>
+        <li class="go-work__list-item">Middleman</li>
+        <li class="go-work__list-item">Ruby</li>
+        <li class="go-work__list-item">HAML</li>
+        <li class="go-work__list-item">SASS</li>
+        <li class="go-work__list-item">Git</li>
+      </ul>
+     </dd>
+    </dl>
+  </Container>
+</section>
+
+<style>
+  .go-work {
+    position: relative;
+  }
+  .go-work__container {
+    max-width: 33.5rem;
+  }
+  .go-work__title {
+    color: var(--color-dark-gray);
+    text-align: center;
+  }
+  .work__project-title {
+    color: var(--color-dark-gray);
+  } 
+  .go-work__project-copy {
+    margin-top: 1.25rem;
+  }
+  .go-work__list {
+    display: flex;
+    gap: 1.325rem;
+  }
+  .go-work__list-title {
+    font-size: 1.375rem;
+    margin-top: 2.5rem;
+  }
+  .go-work__list-item {
+    color: var(--color-primary);
+    padding: 0 0.938rem;
+    border: solid 0.063rem var(--color-primary);
+    border-radius: 0.938rem;
+    font-size: 0.625rem;
+  }
+</style>
