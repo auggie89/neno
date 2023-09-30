@@ -3,7 +3,7 @@ interface Props {
   type: "button" | "submit" | "reset"
   href?: string
   class?: string
-  color?: "primary"
+  color?: "primary" | "secondary"
 }
 
 import RightArrow from "../Icons/RightArrow.astro";
@@ -33,7 +33,7 @@ const Element = href ? "a" : "button"
   }
   
   .ga-btn-primary {
-    background-color: var(--color-primary)
+    background-color: var(--color-primary);
   }
   .ga-btn-secondary {
     background-color: var(--color-secondary);
