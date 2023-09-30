@@ -1,21 +1,51 @@
 ---
+import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
 ---
 
-<section>
-  <Container>
-    <h2>Who we are</h2>
-    <p>
-      An energetic team of six professionals who consider programming more than
-      pure code writing. For us, coding is a constant challenge of finding perfect
-      solutions for our clients' needs - a constant strive for new knowledge and
-      creativity in creating cleaner, better and more efficient code.
-    </p>
-    <h2>What we offer</h2>
-    <p>
-      An agile, flexible and reliable service devoted to producing high-quality
-      solutions and meeting our deadlines through personalized service, clear
-      communications, persistence and efficient management.
-    </p>
+<section class="gm-about">
+  <Container class="gm-about__container">   
+    <div>
+      <h2 class="gu-display-2xl gm-about__title">Who we are</h2>
+      <p class="gm-about__copy">
+        An energetic team of six professionals who consider programming more than
+        pure code writing. For us, coding is a constant challenge of finding perfect
+        solutions for our clients' needs - a constant strive for new knowledge and
+        creativity in creating cleaner, better and more efficient code.
+      </p>
+    </div>
+    <div>
+      <h2 class="gu-display-2xl gm-about__title">What we offer</h2>
+      <p class="gm-about__copy">
+        An agile, flexible and reliable service devoted to producing high-quality
+        solutions and meeting our deadlines through personalized service, clear
+        communications, persistence and efficient management.
+      </p>
+    </div>
   </Container>
+  <Button type="button" color="secondary" class="gm-about__button">
+    Find out about our expertise
+  </Button>
 </section>
+
+<style>
+  .gm-about {
+    background-color: var(--color-primary);
+    padding: 6.25rem 0;
+  }
+  .gm-about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .gm-about__title {
+    color: var(--color-white);
+  }
+  .gm-about__copy {
+    color: var(--color-white);
+    margin-top: 2.9rem;
+  }
+  .gm-about__button {
+    margin: 5rem auto 0 auto;
+  }
+</style>
