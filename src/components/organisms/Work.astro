@@ -1,4 +1,6 @@
 ---
+import RightArrow from "../Icons/RightArrow.astro";
+import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
 import { Image } from 'astro:assets';
 ---
@@ -21,9 +23,30 @@ import { Image } from 'astro:assets';
         <li class="go-work__list-item">SASS</li>
         <li class="go-work__list-item">Git</li>
       </ul>
-     </dd>
-     <dt class="go-work__project-dt">Client:</dt>
+      </dd>
+      <div class="go-work__project-info">
+        <div>
+          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+          <dt class="go-work__project-dt">Client:</dt>
+          <dd class="go-work__project-dd">
+            <a class="go-work__project-link" href="http://www.hinderlingvolkart.com">Hinderling Volkart</a>
+          </dd>
+        </div>
+        <div>
+          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+          <dt class="go-work__project-dt">End client:</dt>
+          <dd class="go-work__project-dd">Swiss</dd>
+        </div>
+        <div>
+          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+          <dt class="go-work__project-dt">Year:</dt>
+          <dd class="go-work__project-dd">2014</dd>
+        </div>
+      </div>
     </dl>
+    <Button type="button" color="secondary">
+      <a href="www.swiss.com">www.swiss.com</a>
+    </Button>
   </Container>
 </section>
 
@@ -49,7 +72,7 @@ import { Image } from 'astro:assets';
   .go-work__list {
     display: flex;
     justify-content: space-between;
-    margin: 1.25rem 0 1.25rem 0;
+    margin-top: 1.25rem;
 
   }
   .go-work__list-title {
@@ -63,11 +86,33 @@ import { Image } from 'astro:assets';
     border-radius: 3.125rem;
     font-size: 0.875rem;
   }
+
+  .go-work__project-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1.25rem;
+  }
   .go-work__project-dt {
     font-size: 1.375rem;
+    display: inline-block;
+    margin-left: 0.2rem;
   }
-  .go-work__project-dt::before {
-    
+  .go-work__project-dd {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-dark-gray);
+    margin-left: 0.313rem;
   }
-
+  .go-work__project-link {
+    border-bottom: 0.125rem solid #dddddd;
+  }
+  .go-work__project-link:visited {
+    color: #333333;
+  }
+  .go-work__project-link:hover {
+    color: var(--color-primary);
+    border-bottom: 0.25rem solid var(--color-primary);
+    transition: border-bottom-color 0.2s ease-in, 0.2s ease-out;
+  }
 </style>

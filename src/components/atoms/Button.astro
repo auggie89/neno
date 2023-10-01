@@ -14,7 +14,7 @@ const Element = href ? "a" : "button"
 <Element class:list={[className,"ga-btn", color && `ga-btn-${color}`]} type={type} href={href}>
   <slot />
   <div class="ga-btn__icon">
-    <RightArrow width="16" height="16"/>
+    <RightArrow width="16" height="16" fill="currentColor"/>
   </div>
 </Element>
 
