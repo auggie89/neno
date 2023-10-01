@@ -14,7 +14,7 @@ import { Image } from 'astro:assets';
      <dd>
       <ul class="go-work__list">
         <li class="go-work__list-item">CSS</li>
-        <li class="go-work__list-item">Html</li>
+        <li class="go-work__list-item">HTML</li>
         <li class="go-work__list-item">Middleman</li>
         <li class="go-work__list-item">Ruby</li>
         <li class="go-work__list-item">HAML</li>
@@ -22,6 +22,7 @@ import { Image } from 'astro:assets';
         <li class="go-work__list-item">Git</li>
       </ul>
      </dd>
+     <dt class="go-work__project-dt">Client:</dt>
     </dl>
   </Container>
 </section>
@@ -29,9 +30,11 @@ import { Image } from 'astro:assets';
 <style>
   .go-work {
     position: relative;
+    padding: 6.25rem 0;
   }
   .go-work__container {
     max-width: 33.5rem;
+    margin: auto;
   }
   .go-work__title {
     color: var(--color-dark-gray);
@@ -45,7 +48,9 @@ import { Image } from 'astro:assets';
   }
   .go-work__list {
     display: flex;
-    gap: 1.325rem;
+    justify-content: space-between;
+    margin: 1.25rem 0 1.25rem 0;
+
   }
   .go-work__list-title {
     font-size: 1.375rem;
@@ -53,9 +58,16 @@ import { Image } from 'astro:assets';
   }
   .go-work__list-item {
     color: var(--color-primary);
-    padding: 0 0.938rem;
+    padding: 0.313rem 0.938rem;
     border: solid 0.063rem var(--color-primary);
-    border-radius: 0.938rem;
-    font-size: 0.625rem;
+    border-radius: 3.125rem;
+    font-size: 0.875rem;
   }
+  .go-work__project-dt {
+    font-size: 1.375rem;
+  }
+  .go-work__project-dt::before {
+    
+  }
+
 </style>
