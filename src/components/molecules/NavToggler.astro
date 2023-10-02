@@ -1,12 +1,10 @@
 ---
 import Hamburger from "../Icons/Hamburger.astro";
-const {href} = Astro.props;
-
 ---
 
-<a class="gm-nav-toggler" href="/">
+<button class="gm-nav-toggler">
   <Hamburger width="16" height="16"/>
-</a>
+</button>
 
 <style>
 .gm-nav-toggler {
@@ -14,5 +12,9 @@ const {href} = Astro.props;
   padding: 0.25rem;
   border-radius: 3.125rem;
   background-color: #20262e;
+}
+
+.gm-nav-toggler:hover {
+background-color: #D51E2D;
 }
 </style>
