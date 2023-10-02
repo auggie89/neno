@@ -3,50 +3,54 @@ import RightArrow from "../Icons/RightArrow.astro";
 import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
 import { Image } from 'astro:assets';
+import SideImg from '../../images/swiss.com@2x.jpg'
 ---
 
 
 <section class="go-work">
   <h2 class="gu-display-2xl go-work__title">Selected Work</h2>
   <Container class="go-work__container">
-    <h3 class="gu-display-lg go-work__project-title">Swiss.com</h3>
-    <p class="go-work__project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
-    <dl class="go-work__dl">
-     <dt class="go-work__list-title">Our responsibilities</dt>
-     <dd>
-      <ul class="go-work__list">
-        <li class="go-work__list-item">CSS</li>
-        <li class="go-work__list-item">HTML</li>
-        <li class="go-work__list-item">Middleman</li>
-        <li class="go-work__list-item">Ruby</li>
-        <li class="go-work__list-item">HAML</li>
-        <li class="go-work__list-item">SASS</li>
-        <li class="go-work__list-item">Git</li>
-      </ul>
-      </dd>
-      <div class="go-work__project-info">
-        <div>
-          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
-          <dt class="go-work__project-dt">Client:</dt>
-          <dd class="go-work__project-dd">
-            <a class="go-work__project-link" href="http://www.hinderlingvolkart.com">Hinderling Volkart</a>
-          </dd>
+    <Image class="go-work__side-img" src={SideImg}  alt="" />
+    <Container class="go-work__left">
+      <h3 class="gu-display-lg go-work__project-title">Swiss.com</h3>
+      <p class="go-work__project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
+      <dl class="go-work__dl">
+      <dt class="go-work__list-title">Our responsibilities</dt>
+      <dd>
+        <ul class="go-work__list">
+          <li class="go-work__list-item">CSS</li>
+          <li class="go-work__list-item">HTML</li>
+          <li class="go-work__list-item">Middleman</li>
+          <li class="go-work__list-item">Ruby</li>
+          <li class="go-work__list-item">HAML</li>
+          <li class="go-work__list-item">SASS</li>
+          <li class="go-work__list-item">Git</li>
+        </ul>
+        </dd>
+        <div class="go-work__project-info">
+          <div>
+            <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+            <dt class="go-work__project-dt">Client:</dt>
+            <dd class="go-work__project-dd">
+              <a class="go-work__project-link" href="http://www.hinderlingvolkart.com">Hinderling Volkart</a>
+            </dd>
+          </div>
+          <div>
+            <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+            <dt class="go-work__project-dt">End client:</dt>
+            <dd class="go-work__project-dd">Swiss</dd>
+          </div>
+          <div>
+            <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+            <dt class="go-work__project-dt">Year:</dt>
+            <dd class="go-work__project-dd">2014</dd>
+          </div>
         </div>
-        <div>
-          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
-          <dt class="go-work__project-dt">End client:</dt>
-          <dd class="go-work__project-dd">Swiss</dd>
-        </div>
-        <div>
-          <RightArrow width="16" height="16" fill="var(--color-primary)"/>
-          <dt class="go-work__project-dt">Year:</dt>
-          <dd class="go-work__project-dd">2014</dd>
-        </div>
-      </div>
-    </dl>
-    <Button type="button" color="secondary">
-      <a href="www.swiss.com">www.swiss.com</a>
-    </Button>
+      </dl>
+      <Button class="go-work__project-btn" type="button" color="secondary">
+        <a href="www.swiss.com">www.swiss.com</a>
+      </Button>
+    </Container>
   </Container>
 </section>
 
@@ -55,16 +59,24 @@ import { Image } from 'astro:assets';
     position: relative;
     padding: 6.25rem 0;
   }
-  .go-work__container {
+  .go-work__container > * {
+    margin-left: 0;
+  }
+  .go-work__side-img {
+    position: absolute;
+    width: 77.25rem;
+    height: 46.711rem;
+    right: -10.313rem;
+  }
+  .go-work__left {
     max-width: 33.5rem;
-    margin: auto;
   }
   .go-work__title {
-    color: var(--color-dark-gray);
     text-align: center;
+    color: var(--color-gray-900);
   }
   .work__project-title {
-    color: var(--color-dark-gray);
+    color: var(--color-gray-900);
   } 
   .go-work__project-copy {
     margin-top: 1.25rem;
@@ -73,7 +85,6 @@ import { Image } from 'astro:assets';
     display: flex;
     justify-content: space-between;
     margin-top: 1.25rem;
-
   }
   .go-work__list-title {
     font-size: 1.375rem;
@@ -86,7 +97,6 @@ import { Image } from 'astro:assets';
     border-radius: 3.125rem;
     font-size: 0.875rem;
   }
-
   .go-work__project-info {
     display: flex;
     flex-direction: column;
@@ -94,25 +104,28 @@ import { Image } from 'astro:assets';
     gap: 1.25rem;
   }
   .go-work__project-dt {
-    font-size: 1.375rem;
     display: inline-block;
+    font-size: 1.375rem;
     margin-left: 0.2rem;
   }
   .go-work__project-dd {
     display: inline-block;
     font-weight: 700;
-    color: var(--color-dark-gray);
+    color: var(--color-gray-900);
     margin-left: 0.313rem;
   }
   .go-work__project-link {
     border-bottom: 0.125rem solid #dddddd;
   }
   .go-work__project-link:visited {
-    color: #333333;
+    color: var(--color-gray-800);
   }
   .go-work__project-link:hover {
     color: var(--color-primary);
     border-bottom: 0.25rem solid var(--color-primary);
     transition: border-bottom-color 0.2s ease-in, 0.2s ease-out;
+  }
+  .go-work__project-btn {
+    margin-top: 13.875rem;
   }
 </style>
