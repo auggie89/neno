@@ -2,16 +2,16 @@
 import RightArrow from "../Icons/RightArrow.astro";
 import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
+import Section from "../layouts/Section.astro";
 import { Image } from 'astro:assets';
 import SideImg from '../../images/swiss.com@2x.jpg'
 ---
 
-
-<section class="go-work">
+<Section class="go-work">
   <h2 class="gu-display-2xl go-work__title">Selected Work</h2>
   <Container class="go-work__container">
     <Image class="go-work__side-img" src={SideImg}  alt="" />
-    <Container class="go-work__left">
+    <article class="go-work__left">
       <h3 class="gu-display-lg go-work__project-title">Swiss.com</h3>
       <p class="go-work__project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
       <dl class="go-work__dl">
@@ -50,14 +50,13 @@ import SideImg from '../../images/swiss.com@2x.jpg'
       <Button class="go-work__project-btn" type="button" color="secondary">
         <a href="www.swiss.com">www.swiss.com</a>
       </Button>
-    </Container>
+    </article>
   </Container>
-</section>
+</Section>
 
 <style>
   .go-work {
     position: relative;
-    padding: 6.25rem 0;
   }
   .go-work__container > * {
     margin-left: 0;

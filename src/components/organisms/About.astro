@@ -1,12 +1,13 @@
 ---
 import Container from "../layouts/Container.astro";
 import Button from "../atoms/Button.astro";
+import Section from "../layouts/Section.astro";
 ---
 
-<section class="go-about">
+<Section as="div" class="go-about">
   <Container class="gu-text-center">
     <div class="go-about__grid">
-      <div>
+      <section>
         <h2 class="gu-display-2xl">Who we are</h2>
         <p class="go-about__copy">
           An energetic team of six professionals who consider programming more than
@@ -14,21 +15,21 @@ import Button from "../atoms/Button.astro";
           solutions for our clients' needs - a constant strive for new knowledge and
           creativity in creating cleaner, better and more efficient code.
         </p>
-      </div>
-      <div>
+      </section>
+      <section>
         <h2 class="gu-display-2xl">What we offer</h2>
         <p class="go-about__copy">
           An agile, flexible and reliable service devoted to producing high-quality
           solutions and meeting our deadlines through personalized service, clear
           communications, persistence and efficient management.
         </p>
-      </div>
+      </section>
     </div>
     <Button type="button" color="secondary" class="go-about__button" href="#our-experties">
         Find out about our expertise
     </Button>
   </Container>
-</section>
+</Section>
 
 <style>
   .go-about {

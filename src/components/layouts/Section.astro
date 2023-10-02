@@ -1,0 +1,19 @@
+---
+interface Props {
+  as?: "section" | "div"
+  class?: string
+}
+
+const {class: className, as } = Astro.props;
+const Element = as || 'section';
+---
+
+<Element class:list={["gl-section", className]}>
+  <slot />
+</Element>
+
+<style>
+  .gl-section {
+    padding: 6.25rem 0;
+  }
+</style>
