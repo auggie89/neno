@@ -20,7 +20,7 @@ const Element = href ? "a" : "button"
 
 <style>
   .ga-btn {
-    display: flex;
+    display: inline-flex;
     height: 3.625rem;
     align-items: center;
     gap: 3rem;
@@ -32,12 +32,8 @@ const Element = href ? "a" : "button"
     box-shadow: rgba(51,51,51,0.2) 0 0.25rem 0;
   }
   
-  .ga-btn-primary {
-    background-color: var(--color-primary);
-  }
-  .ga-btn-secondary {
-    background-color: var(--color-secondary);
-  }
+  .ga-btn-primary { background-color: var(--color-primary); }
+  .ga-btn-secondary { background-color: var(--color-secondary); }
 
   .ga-btn__icon {
     display: flex;
@@ -47,7 +43,6 @@ const Element = href ? "a" : "button"
     border-radius: 3.125rem;
     border: solid white 0.125rem;
   }
-  .ga-btn:hover .ga-btn__icon {
-    background-color: #2DA0AB;
-  }
+
+  .ga-btn:hover .ga-btn__icon { background-color: #2DA0AB; }
 </style>
