@@ -6,7 +6,7 @@ interface Props {
   color?: "primary" | "secondary"
 }
 
-import RightArrow from "../Icons/RightArrow.astro";
+import ArrowRight from "../icons/ArrowRight.astro";
 const {class:className, type, href, color} = Astro.props;
 const Element = href ? "a" : "button"
 ---
@@ -14,7 +14,7 @@ const Element = href ? "a" : "button"
 <Element class:list={[className,"ga-btn", color && `ga-btn-${color}`]} type={type} href={href}>
   <slot />
   <div class="ga-btn__icon">
-    <RightArrow width="16" height="16" fill="currentColor"/>
+    <ArrowRight width="24" height="24" />
   </div>
 </Element>
 
@@ -39,7 +39,7 @@ const Element = href ? "a" : "button"
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: 3.125rem;
     border: solid white 0.125rem;
   }

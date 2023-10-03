@@ -1,0 +1,26 @@
+---
+import Letter from "../icons/Letter.astro";
+import Phone from "../icons/Phone.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import ContactLink from "../atoms/ContactLink.astro";
+
+const {class: className} = Astro.props;
+---
+<ul class:list={["gm-contact-list", className]}>
+  <li class="gm-contact-list__item">
+    <ContactLink icon={Letter} label="neno@neno.ch" href="mailto:neno@neno.ch" />
+  </li>
+  <li class="gm-contact-list__item">
+    <ContactLink icon={Phone} label="+41797858389" href="tel:+41797858389" />
+  </li>
+  <li class="gm-contact-list__item">
+    <ContactLink icon={LinkedIn} label="LinkedIn" href="https://www.linkedin.com/company/neno/" />
+  </li>
+</ul>
+
+<style>
+  .gm-contact-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+</style>
