@@ -1,20 +1,24 @@
 ---
-import Hamburger from "../Icons/Hamburger.astro";
+import Hamburger from '../icons/Hamburger.astro'
 ---
 
 <button class="gm-nav-toggler">
-  <Hamburger width="16" height="16"/>
+  <Hamburger width="16" height="16" />
 </button>
 
 <style>
-.gm-nav-toggler {
-  display: flex;
-  padding: 0.25rem;
-  border-radius: 3.125rem;
-  background-color: #20262e;
-}
+  .gm-nav-toggler {
+    display: flex;
+    padding: 0.25rem;
+    border-radius: 3.125rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+  }
 
-.gm-nav-toggler:hover {
-background-color: #D51E2D;
-}
+  .gm-nav-toggler:hover {
+    background-color: var(--color-primary);
+  }
 </style>
