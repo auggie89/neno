@@ -16,7 +16,7 @@ const Icon = icon;
     align-items: center;
     flex-direction: column;
     color: var(--color-white);
-    font-size: 1.5rem;
+    font-size: 0;
     font-weight: 700;
   }
 
@@ -29,6 +29,10 @@ const Icon = icon;
     border-radius: 50%;
     background-color: var(--color-white);
     color: var(--color-primary);
-    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .ga-contact-link {font-size: 1.5rem;}
+    .ga-contact-link__icon {margin-bottom: 1rem;}
   }
 </style>
