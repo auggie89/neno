@@ -1,9 +1,11 @@
 ---
+import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
+import Section from "../layouts/Section.astro";
 
 ---
 
-<section class="go-expertise">
+<Section class="go-expertise">
   <Container>
     <h2 class="gu-display-2xl go-expertise__title">Our expertise</h2>
     <ul class="go-expertise__grid">
@@ -14,13 +16,16 @@ import Container from "../layouts/Container.astro";
       <li class="go-expertise__grid-item gu-display-lg">Robust code for browser and platform compatibility.</li>
       <li class="go-expertise__grid-item gu-display-lg">Web Accessibility according to WCAG 2.0. </li>
     </ul>
+    <Button class="go-expertise__btn" color="primary" type="button" href="#our-workflow">
+      See our workflow next
+    </Button>
   </Container>
-</section>
+</Section>
 
 <style>
   .go-expertise {
     background-color: var(--color-secondary);
-    padding: 6.25rem 0;
+    text-align: center;
   }
   .go-expertise__title {
     text-align: center;
@@ -33,7 +38,8 @@ import Container from "../layouts/Container.astro";
     margin-top: 5rem;
   }
   .go-expertise__grid-item {
-  
+    text-align: center;
+    /*max-width: 22.978rem;*/
     padding: 3.094rem;
     color: var(--color-white);
   }
@@ -54,5 +60,8 @@ import Container from "../layouts/Container.astro";
   }
   .go-expertise__grid-item:nth-child(6) {
     background-color: #6B939B;
+  }
+  .go-expertise__btn {
+    margin-top: 5rem;
   }
 </style>
