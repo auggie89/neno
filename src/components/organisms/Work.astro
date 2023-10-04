@@ -1,24 +1,38 @@
 ---
+import '@splidejs/splide/css';
 import RightArrow from "../icons/ArrowRight.astro";
 import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
 import Section from "../layouts/Section.astro";
 import { Image } from 'astro:assets';
 import SideImg from '../../images/swiss.com@2x.jpg'
+import Pagination from "../molecules/Pagination.astro";
 ---
 
 <Section class="go-work">
   <h2 class="gu-display-2xl go-work__title">Selected Work</h2>
+  <Pagination class="go-work__pagination-top"/>
   <Container class="go-work__container">
-    <Image class="go-work__side-img" src={SideImg}  alt="" />
+    <div class="go-work__slider">
+      <div class="splide" id="slider" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">Slide 01</li>
+            <li class="splide__slide">Slide 02</li>
+            <li class="splide__slide">Slide 03</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <Image class="go-work__side-img" src={SideImg}  alt="" />
     <article class="go-work__left">
       <h3 class="gu-display-lg go-work__project-title">Swiss.com</h3>
       <p class="go-work__project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
-      <dl class="go-work__dl">
+      <dl class="go-work__dl"> 
       <dt class="go-work__list-title">Our responsibilities</dt>
       <dd>
-        <ul class="go-work__list">
-          <li class="go-work__list-item">CSS</li>
+        <ul class="go-work__list"> m
+          <li class="go-work__list-item">CSS</li> a
           <li class="go-work__list-item">HTML</li>
           <li class="go-work__list-item">Middleman</li>
           <li class="go-work__list-item">Ruby</li>
@@ -50,14 +64,11 @@ import SideImg from '../../images/swiss.com@2x.jpg'
       <Button class="go-work__project-btn" type="button" color="secondary">
         <a href="www.swiss.com">www.swiss.com</a>
       </Button>
-    </article>
+    </article> -->
   </Container>
 </Section>
 
 <style>
-  .go-work {
-    position: relative;
-  }
   .go-work__container > * {
     margin-left: 0;
   }
@@ -69,6 +80,7 @@ import SideImg from '../../images/swiss.com@2x.jpg'
   }
   .go-work__left {
     max-width: 33.5rem;
+    position: relative;
   }
   .go-work__title {
     text-align: center;
@@ -127,4 +139,18 @@ import SideImg from '../../images/swiss.com@2x.jpg'
   .go-work__project-btn {
     margin-top: 13.875rem;
   }
+  .go-work__slider .splide__pagination__page {
+    width: 0.625rem;
+    height: 0.625rem;
+    
+  }
 </style>
+
+<script>
+  import Splide from '@splidejs/splide';
+
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+  } );
+</script>

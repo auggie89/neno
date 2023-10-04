@@ -1,0 +1,30 @@
+---
+import ArrowRight from "../icons/ArrowRight.astro";
+import ArrowLeft from "../icons/ArrowLeft.astro";
+import BulletList from "../atoms/BulletList.astro";
+
+---
+
+<div class="gm-pagination">
+  <button class="gm-pagination__btn">
+    <ArrowLeft width="50" height="50"/>
+  </button>
+  <BulletList />
+  <button class="gm-pagination__btn">
+    <ArrowRight width="50" height="50"/>
+  </button>
+</div>
+
+<style>
+  .gm-pagination {
+    display: flex;
+    align-items: center;
+  }
+  .gm-pagination__btn {
+    color: rgb(221, 221, 221);
+    border: none;
+  }
+  .gm-pagination  {
+
+  }
+</style>
