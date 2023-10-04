@@ -1,0 +1,54 @@
+---
+import RightArrow from "../Icons/RightArrow.astro";
+---
+
+<div class="ga-dl-list">
+  <div>
+    <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+    <dt class="ga-dl-list__dt">Client:</dt>
+    <dd class="ga-dl-list__dd">
+      <a class="ga-dl-list__link" href="http://www.hinderlingvolkart.com">Hinderling Volkart</a>
+    </dd>
+  </div>
+  <div>
+    <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+    <dt class="ga-dl-list__dt">End client:</dt>
+    <dd class="ga-dl-list__dd">Swiss</dd>
+  </div>
+  <div>
+    <RightArrow width="16" height="16" fill="var(--color-primary)"/>
+    <dt class="ga-dl-list__dt">Year:</dt>
+    <dd class="ga-dl-list__dd">2014</dd>
+  </div>
+</div>
+
+<style>
+  .ga-dl-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1.25rem;
+  }
+  .ga-dl-list__dt {
+    display: inline-block;
+    font-size: 1.375rem;
+    margin-left: 0.2rem;
+  }
+  .ga-dl-list__dd {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin-left: 0.313rem;
+  }
+  .ga-dl-list__link {
+    border-bottom: 0.125rem solid #dddddd;
+  }
+  .ga-dl-list__link:visited {
+    color: var(--color-gray-800);
+  }
+  .ga-dl-list__link:hover {
+    color: var(--color-primary);
+    border-bottom: 0.25rem solid var(--color-primary);
+    transition: border-bottom-color 0.2s ease-in, 0.2s ease-out;
+  }
+</style>
