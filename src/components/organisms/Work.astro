@@ -1,18 +1,14 @@
 ---
 import '@splidejs/splide/css';
-import RightArrow from "../icons/ArrowRight.astro";
-import Button from "../atoms/Button.astro";
 import Container from "../layouts/Container.astro";
 import Section from "../layouts/Section.astro";
-import { Image } from 'astro:assets';
-import SideImg from '../../images/swiss.com@2x.jpg'
-import Pagination from "../molecules/Pagination.astro";
+import Project from './Project.astro';
 ---
 
 <Section class="go-work">
   <h2 class="gu-display-2xl go-work__title">Selected Work</h2>
-  <Pagination class="go-work__pagination-top"/>
   <Container class="go-work__container">
+    <Project />
     <div class="go-work__slider">
       <div class="splide" id="slider" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
@@ -72,77 +68,13 @@ import Pagination from "../molecules/Pagination.astro";
   .go-work__container > * {
     margin-left: 0;
   }
-  .go-work__side-img {
-    position: absolute;
-    width: 77.25rem;
-    height: 46.711rem;
-    right: -10.313rem;
-  }
-  .go-work__left {
-    max-width: 33.5rem;
-    position: relative;
-  }
   .go-work__title {
     text-align: center;
     color: var(--color-gray-900);
   }
-  .work__project-title {
-    color: var(--color-gray-900);
-  } 
-  .go-work__project-copy {
-    margin-top: 1.25rem;
-  }
-  .go-work__list {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.25rem;
-  }
-  .go-work__list-title {
-    font-size: 1.375rem;
-    margin-top: 2.5rem;
-  }
-  .go-work__list-item {
-    color: var(--color-primary);
-    padding: 0.313rem 0.938rem;
-    border: solid 0.063rem var(--color-primary);
-    border-radius: 3.125rem;
-    font-size: 0.875rem;
-  }
-  .go-work__project-info {   
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.5rem;
-    gap: 1.25rem;
-  }
-  .go-work__project-dt {    
-    display: inline-block;
-    font-size: 1.375rem;
-    margin-left: 0.2rem;
-  }
-  .go-work__project-dd {    
-    display: inline-block;
-    font-weight: 700;
-    color: var(--color-gray-900);
-    margin-left: 0.313rem;
-  }
-  .go-work__project-link {       
-    border-bottom: 0.125rem solid #dddddd;
-  }
-  .go-work__project-link:visited {   
-    color: var(--color-gray-800);
-  }
-  .go-work__project-link:hover {  
-    color: var(--color-primary);
-    border-bottom: 0.25rem solid var(--color-primary);
-    transition: border-bottom-color 0.2s ease-in, 0.2s ease-out;
-  }
-  .go-work__project-btn {
-    margin-top: 13.875rem;
-  }
   .go-work__slider .splide__pagination__page {
     width: 0.625rem;
-    height: 0.625rem;
-    
+    height: 0.625rem; 
   }
 </style>
 

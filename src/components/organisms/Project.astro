@@ -1,15 +1,26 @@
 ---
 import DlList from "../atoms/DlList.astro";
+import TagGroup from "../molecules/TagGroup.astro";
+import { Image } from 'astro:assets';
+import SideImg from '../../images/swiss.com@2x.jpg';
+import Button from "../atoms/Button.astro";
 ---
 <article class="go-project">
-  <h3 class="gu-display-lg gm-project-title">Swiss.com</h3>
+  <Image class="go-project__side-img" src={SideImg}  alt="" />
+  <h3 class="gu-display-lg go-project-title">Swiss.com</h3>
+  <p class="go-project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS.</p>
+  <dt class="go-project-tags-title">Our responsibilities</dt>
+  <TagGroup />
   <DlList />
-  <p class="go-project-copy">Hinderling Volkart invited us to support them in the frontend development of the new swiss.com website. We're grateful and proud to have been involved in such a large and successful project. Our team helped create the base of the frontend process of this responsive redesign. We worked on the frontend engineering, using HTML and CSS. </p>
+  <Button class="go-project__btn" type="button" color="secondary">
+    <a href="www.swiss.com">www.swiss.com</a>
+  </Button>
 </article>
 
 <style>
   .go-project {
     max-width: 33.5rem;
+    position: relative;
   }
   .go-project-copy {
     margin-top: 1.25rem;
@@ -17,4 +28,17 @@ import DlList from "../atoms/DlList.astro";
   .go-project-title {
     color: var(--color-gray-900);
   } 
+  .go-project-tags-title {
+    font-size: 1.375rem;
+    margin-top: 2.5rem;
+  }
+  .go-project__side-img {
+    position: absolute;
+    width: 77.25rem;
+    height: 46.711rem;
+    right: -79.313rem;
+  }
+  .go-project__btn {
+    margin-top: 13.875rem;
+  }
 </style>
