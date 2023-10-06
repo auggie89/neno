@@ -1,26 +1,18 @@
 ---
+import Tag from "../atoms/Tag.astro";
 const titles = ["CSS", "HTML", "Middleman", "Ruby", "HAML", "SASS", "Git"] 
 ---
+
 <ul class="gm-tag-group">
   {titles.map(title => (
-    <li><span class="gm-tag-group__tag">{title}</span></li>
+    <Tag title={title} />
   ))}
 </ul>
-
-
-
 
 <style>
   .gm-tag-group {
     display: flex;
     justify-content: space-between;
     margin-top: 1.25rem;
-  }
-    .gm-tag-group__tag {
-    color: var(--color-primary);
-    padding: 0.313rem 0.938rem;
-    border: solid 0.063rem var(--color-primary);
-    border-radius: 3.125rem;
-    font-size: 0.875rem;
   }
 </style>
