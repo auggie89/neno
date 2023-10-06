@@ -39,10 +39,20 @@ import Section from "../layouts/Section.astro";
   }
 
   .go-about__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem 2.5rem;
     text-align: left;
+  }
+
+  .go-about__grid > * {
+    flex-grow: 1;
+    flex-basis: calc(( 50rem - 100%) * 999);
+  }
+
+  .go-about__grid > :nth-last-child(n+ 3),
+  .go-about__grid > :nth-last-child(n+ 3) ~ * {
+    flex-basis: 100%;
   }
 
   .go-about__copy { margin-top: 2.9rem; }
