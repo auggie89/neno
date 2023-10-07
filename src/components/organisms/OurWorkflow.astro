@@ -1,0 +1,30 @@
+---
+import Button from "../atoms/Button.astro";
+import Section from "../layouts/Section.astro";
+
+---
+
+<Section class="go-workflow">
+  <h2 class="gu-display-2xl go-workflow-title">Our Workflow</h2>
+  <p class="go-workflow__copy"> Our each project starts by setting up a unique front-end prototype, tailor made by our team to serve as a management system for the project. The prototype is at the centre of things, connecting every part of the project and every member of the project. It allows us to have a modular, agile development process. All tasks are connected to tickets, which are connected to modules and templates. Thanks to our prototype, we address the needs of every person involved. </p>
+  <Button class="go-workflow__btn" type="button" color="primary">
+    This is how we do it
+  </Button>
+</Section>
+
+<style>
+  .go-workflow {
+    background-color: #d9ebed;
+    text-align: center;
+  }
+  .go-workflow-title {
+    color: var(--color-gray-600);
+  }
+  .go-workflow__copy {
+    max-width: 43.75rem;
+    margin: 2.9rem auto 0 auto;
+  }
+  .go-workflow__btn {
+    margin-top: 5rem;
+  }
+</style>
