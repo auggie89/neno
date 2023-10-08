@@ -4,12 +4,18 @@
       <span>1</span>
     </div>
     <h2 class="gm-step__title">Clients</h2>
+    <p class="gm-step__copy">In our process, clients are not spectators, but active members of the team. The clients are involved in the project from start to finish. They have the means to:In our process, clients are not spectators, but active members of the team. The clients are involved in the project from start to finish. They have the means to:</p>
+    <ul class="gm-step__list">
+      <li class="gm-step__list-item">overlook the entire development process in the prototype</li>
+      <li class="gm-step__list-item">review the design and see the evolvement of the project step by step</li>
+      <li class="gm-step__list-item">request changes during the process</li>
+      <li class="gm-step__list-item">see their visions come to life</li>
+    </ul>
   </div>
 </div>
 
 <style>
   .gm-step {
-
 
   }
   .gm-step__number span {
@@ -20,6 +26,7 @@
   }
   .gm-step__number {
     position: relative;
+    display: inline-block;
     background-color: var(--color-primary);
     color: var(--color-white);
     padding: 1.875rem;
@@ -28,5 +35,25 @@
   .gm-step__title {
     font-size: 2.625rem;
     color: var(--color-gray-600);
+  }
+  .gm-step__info {
+    max-width: 33.5rem;
+  }
+  .gm-step__copy, .gm-step__title {
+    margin-top: 1.969rem;
+  }
+  .gm-step__list {
+    margin-top: 0.938rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.031rem;
+  }
+  .gm-step__list-item {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-gray-500);
+  }
+  .gm-step__list-item:before {
+   
   }
 </style>
