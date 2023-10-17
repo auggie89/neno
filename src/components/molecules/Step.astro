@@ -1,4 +1,12 @@
+---
+import ArrowRight from "../icons/ArrowRight.astro";
+import { Image } from 'astro:assets';
+import SideImg1 from '../../images/steps-laptop.jpg'
+
+---
+
 <div class="gm-step">
+  <Image class="gm-step__side-img" width="1236" height="711" src={SideImg1} alt="" />
   <div class="gm-step__info">
     <div class="gm-step__number">
       <span>1</span>
@@ -6,7 +14,7 @@
     <h2 class="gm-step__title">Clients</h2>
     <p class="gm-step__copy">In our process, clients are not spectators, but active members of the team. The clients are involved in the project from start to finish. They have the means to:In our process, clients are not spectators, but active members of the team. The clients are involved in the project from start to finish. They have the means to:</p>
     <ul class="gm-step__list">
-      <li class="gm-step__list-item">overlook the entire development process in the prototype</li>
+      <ArrowRight width="16" height="16" /><li class="gm-step__list-item">overlook the entire development process in the prototype</li>
       <li class="gm-step__list-item">review the design and see the evolvement of the project step by step</li>
       <li class="gm-step__list-item">request changes during the process</li>
       <li class="gm-step__list-item">see their visions come to life</li>
@@ -15,9 +23,11 @@
 </div>
 
 <style>
-  .gm-step {
-
-  }
+ /* .gm-step__side-img {
+    position: absolute;
+    top: 0;
+    right: 50;
+  }*/
   .gm-step__number span {
     position: absolute;
     font-size: 2.125rem;
@@ -38,6 +48,7 @@
   }
   .gm-step__info {
     max-width: 33.5rem;
+  /*  position: relative; */
   }
   .gm-step__copy, .gm-step__title {
     margin-top: 1.969rem;
@@ -49,11 +60,9 @@
     gap: 1.031rem;
   }
   .gm-step__list-item {
+    display: inline-block;
     font-size: 1.375rem;
     font-weight: 700;
     color: var(--color-gray-500);
-  }
-  .gm-step__list-item:before {
-   
   }
 </style>
